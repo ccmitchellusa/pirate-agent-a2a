@@ -33,7 +33,8 @@ COPY --from=uv --chown=app:app /app/.venv /app/.venv
 
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:/app:$PATH"
-
+# Ensure the installed uv binary is on the `PATH`
+ENV PATH="/root/.local/bin/:$PATH"
 EXPOSE 8000
 
 #ENTRYPOINT ["/app/run.sh"]
