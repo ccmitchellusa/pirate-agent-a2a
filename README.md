@@ -71,11 +71,27 @@ docker build -f Dockerfile --push -t icr.io/agentic/a2a .
 9. Select Done
 
 
-## Usage
+## CLI Usage
 
 Start the agent:
 ```bash
 ./run.sh
+```
+Open browser on http://0.0.0.0:8000/agent-card.json to view card JSON.
+
+## A2A CLI Usage
+
+To connect with Chris Hay's A2A CLI client (Localhost):
+```bash
+uvx a2a-cli --server http://localhost:8000 chat
+
+```
+Connect a2a-cli to agent running on Code Engine:
+1. In the IBM Cloud console> Code Engine > Application page, click "Test Application" in upper right corner.  Copy the app's url.
+2. Replace the url in the following snippet with the actual app's url from step 1:
+
+```bash
+uvx a2a-cli --log-level DEBUG --server https://application-42.1uo9xqkaspg3.us-east.codeengine.appdomain.cloud chat
 ```
 
 ## Contributing
