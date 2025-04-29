@@ -24,6 +24,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 FROM python:3.13-slim-bookworm
 
+COPY --chown=1001:0 run.sh /app/
+USER 1001:0
 WORKDIR /app
  
 #COPY --from=uv /root/.local /root/.local
