@@ -37,4 +37,4 @@ ENV PATH="/app/.venv/bin:/app:$PATH"
 EXPOSE 8000
 
 #ENTRYPOINT ["/app/run.sh"]
-CME ["uv","run","-m","pirate_agent_a2a.main","--config","agent.yaml","--limit-concurrency","100"]
+CMD ["uv","run","-m","pirate_agent_a2a.main","--config","agent.yaml","--limit-concurrency","100"]
