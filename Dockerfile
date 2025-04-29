@@ -24,8 +24,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 FROM python:3.13-slim-bookworm
 
-COPY --chown=1001:0 run.sh /app/
-USER 1001:0
+#COPY --chown=1001:0 run.sh /app/
+#USER 1001:0
 WORKDIR /app
  
 #COPY --from=uv /root/.local /root/.local
@@ -36,5 +36,5 @@ ENV PATH="/app/.venv/bin:/app:$PATH"
 
 EXPOSE 8000
 
-ENTRYPOINT ["/app/run.sh"]
-
+#ENTRYPOINT ["/app/run.sh"]
+CME ["uv","run","-m","pirate_agent_a2a.main","--config","agent.yaml","--limit-concurrency","100"]
