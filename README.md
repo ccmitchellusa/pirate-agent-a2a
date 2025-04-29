@@ -9,15 +9,20 @@ Pirate Agent A2A is an autonomous agent designed to simulate conversations with 
 ## Installation & Setup
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/pirate-agent-a2a.git
 cd pirate-agent-a2a
 ```
+
 2. Install dependencies:
+
 ```bash
 uv sync --reinstall
 ```
+
 alternatively:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -31,18 +36,22 @@ docker build --load -t pirate-agent:latest .
 ```
 
 ### Deploy to local Podman, Rancher or Docker desktop
+
 ```bash
 docker images ls
 ```
-Get the image id that was pushed
-Now run the image (on local podman)
-```
+
+1. Get the image id that was pushed
+2. Now run the image (on local podman)
+
+```bash
 podman run --rm -it pirate-agent:latest
 ```
 
 ### Build and deploy to IBM Cloud container registry
 In this example, agentic is your icr NAMESPACE and a2a is your REPOSITORY name.
 Replace RESOURCE_GROUP with the name of the resource group where you want the container registry.
+
 ```bash
 # Log docker into the IBM Clouf container registry at icr.io
 ibmcloud cr login 
