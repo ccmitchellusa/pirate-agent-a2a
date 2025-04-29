@@ -27,12 +27,17 @@ pip install -r requirements.txt
 ### Build
 
 ```bash
-docker build -f Dockerfile -t pirate-agent:a2a -o "type=local,dest=./out/pirate-agent" --load .
+docker build --load -t pirate-agent:latest .
 ```
 
 ### Deploy to local Podman, Rancher or Docker desktop
 ```bash
-podman run --rm -i pirate-agent:a2a
+docker images ls
+```
+Get the image id that was pushed
+Now run the image (on local podman)
+```
+podman run --rm -it pirate-agent:latest
 ```
 
 ### Build and deploy to IBM Cloud container registry
@@ -46,6 +51,25 @@ ibmcloud cr namespace-add -g RESOURCE_GROUP agentic
 docker build -f Dockerfile --push -t icr.io/agentic/a2a .
 
 ```
+
+### Run from source code in IBM Cloud container engine
+
+1. Navigate to Containers/Serverless/Projects
+2. Create a project, eg. “A2A-play”
+3. Navigate to “Applications”
+4. Create application
+	Name: pirate-agent-a2a
+	Code repo URL: https://github.com/ccmitchellusa/pirate-agent-a2a
+
+5. Navigate to "Optional settings"
+	Image start options
+		Listening port: 8000
+
+6. Scroll back up to Code section.
+7.  Select “Specify build details” > Next > Next >.
+8. Select a container registry namespace
+9. Select Done
+
 
 ## Usage
 
