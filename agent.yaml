@@ -15,10 +15,10 @@ handlers:
       description: "Converts your text into salty pirate‑speak"
       url: "https://pirate.example.com"
       version: "0.1.0"
-      documentationUrl: "https://pirate.example.com/docs"
+      documentationUrl: "https://github.com/ccmitchellusa/pirate-agent-a2a/blob/main/README.md"
       provider:
-        organization: "Acme"
-        url: "https://acme.example.com"
+        organization: "IBM"
+        url: "https://www.ibm.com"
       capabilities:
         streaming: true
         pushNotifications: false
