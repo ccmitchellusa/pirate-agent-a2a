@@ -34,5 +34,5 @@ ENV PATH="/app/.venv/bin:/app:$PATH"
 
 EXPOSE 8000
 
-ENTRYPOINT ["run.sh"]
+ENTRYPOINT ["/app/run.sh"]
 
