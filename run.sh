@@ -1,2 +1,3 @@
+#!/bin/bash
 # Concurrency limit needs to match the Code Engine Max concurrency setting when run on IBM Cloud...
 uv run -m pirate_agent_a2a.main --config agent.yaml --limit-concurrency 100
