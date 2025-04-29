@@ -1,4 +1,4 @@
-# Pirate Agent A2A
+# 🏴‍☠️Pirate Agent A2A
 
 Pirate Agent A2A is an autonomous agent designed to simulate conversations with a pirate. 
 
