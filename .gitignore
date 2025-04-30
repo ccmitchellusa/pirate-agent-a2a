@@ -9,5 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+# cache
+.pytest_cache
+
 # gitignore
 .env
